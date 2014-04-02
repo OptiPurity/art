@@ -41,6 +41,8 @@
 #include <sys/prctl.h>
 #endif
 
+#include <sys/resource.h>
+
 #include <selinux/android.h>
 
 #if defined(__linux__)
