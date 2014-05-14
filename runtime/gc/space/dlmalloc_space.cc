@@ -19,7 +19,7 @@
 #include "gc/heap.h"
 #include "mirror/object-inl.h"
 #include "runtime.h"
-#include "thread.h"
+#include "thread-inl.h"
 #include "utils.h"
 
 #include <valgrind.h>

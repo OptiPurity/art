@@ -33,6 +33,7 @@
 #include "sirt_ref.h"
 #include "throwable.h"
 #include "well_known_classes.h"
+#include "thread-inl.h"
 
 namespace art {
 namespace mirror {

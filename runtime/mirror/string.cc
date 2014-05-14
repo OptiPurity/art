@@ -22,7 +22,7 @@
 #include "object-inl.h"
 #include "runtime.h"
 #include "sirt_ref.h"
-#include "thread.h"
+#include "thread-inl.h"
 #include "utf.h"
 
 namespace art {

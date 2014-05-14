@@ -26,7 +26,7 @@
 #include "mirror/object-inl.h"
 #include "mirror/object_array-inl.h"
 #include "object_utils.h"
-#include "thread.h"
+#include "thread-inl.h"
 #include "verifier/method_verifier.h"
 
 #include <sstream>

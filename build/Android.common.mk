@@ -113,9 +113,7 @@ art_cflags := \
 	-ggdb3 \
 	-Wall \
 	-Werror \
-	-Wextra \
-	-Wstrict-aliasing=3 \
-	-fstrict-aliasing
+	-Wextra
 
 ifeq ($(ART_SMALL_MODE),true)
   art_cflags += -DART_SMALL_MODE=1
@@ -164,7 +162,7 @@ endif
 ifneq ($(filter 4.6 4.6.%, $(shell $(TARGET_CC) --version)),)
   ART_TARGET_CFLAGS += -Wthread-safety
 endif
-ifneq ($(filter 4.6 4.6.%, $(shell $(HOST_CC) --version)),)
+ifneq ($(filter 4.6 4.6.%, $(shell $(CC) --version)),)
 # Enable thread-safety for GCC 4.6 on the target but not for GCC 4.7 where this feature was removed.
   ART_HOST_CFLAGS += -Wthread-safety
 endif

@@ -16,10 +16,7 @@
 
 #define ATRACE_TAG ATRACE_TAG_DALVIK
 
-#include "thread.h"
-
 #include <cutils/trace.h>
-#include <pthread.h>
 #include <signal.h>
 #include <sys/resource.h>
 #include <sys/time.h>

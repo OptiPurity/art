@@ -21,7 +21,7 @@
 #include "mirror/object_array-inl.h"
 #include "mirror/object-inl.h"
 #include "mirror/string.h"
-#include "thread.h"
+#include "thread-inl.h"
 #include "UniquePtr.h"
 #include "utf.h"
 
