@@ -559,7 +559,7 @@ class OatDumper {
     static const DexFile* verified_dex_file = NULL;
     static uint32_t verified_dex_method_idx = DexFile::kDexNoIndex;
     if (dex_file != verified_dex_file || verified_dex_method_idx != dex_method_idx) {
-      static ScopedObjectAccess soa(Thread::Current());
+      ScopedObjectAccess soa(Thread::Current());
       mirror::DexCache* dex_cache = Runtime::Current()->GetClassLinker()->FindDexCache(*dex_file);
       mirror::ClassLoader* class_loader = NULL;
       verifier.reset(new verifier::MethodVerifier(dex_file, dex_cache, class_loader, &class_def,
@@ -617,7 +617,7 @@ class OatDumper {
                     const DexFile::ClassDef& class_def, const DexFile::CodeItem* code_item,
                     uint32_t method_access_flags) {
     if ((method_access_flags & kAccNative) == 0) {
-      static ScopedObjectAccess soa(Thread::Current());
+      ScopedObjectAccess soa(Thread::Current());
       mirror::DexCache* dex_cache = Runtime::Current()->GetClassLinker()->FindDexCache(*dex_file);
       mirror::ClassLoader* class_loader = NULL;
       verifier::MethodVerifier::VerifyMethodAndDump(os, dex_method_idx, dex_file, dex_cache,
@@ -749,7 +749,7 @@ class ImageDumper {
     // Loop through all the image spaces and dump their objects.
     gc::Heap* heap = Runtime::Current()->GetHeap();
     const std::vector<gc::space::ContinuousSpace*>& spaces = heap->GetContinuousSpaces();
-    static Thread* self = Thread::Current();
+    Thread* self = Thread::Current();
     {
       WriterMutexLock mu(self, *Locks::heap_bitmap_lock_);
       heap->FlushAllocStack();
@@ -1455,7 +1455,7 @@ static int oatdump(int argc, char** argv) {
   // Runtime::Create acquired the mutator_lock_ that is normally given away when we Runtime::Start,
   // give it away now and then switch to a more managable ScopedObjectAccess.
   Thread::Current()->TransitionFromRunnableToSuspended(kNative);
-  static ScopedObjectAccess soa(Thread::Current());
+  ScopedObjectAccess soa(Thread::Current());
 
   gc::Heap* heap = Runtime::Current()->GetHeap();
   gc::space::ImageSpace* image_space = heap->GetImageSpace();

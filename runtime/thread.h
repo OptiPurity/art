@@ -110,7 +110,7 @@ class PACKED(4) Thread {
     if (!is_started_) {
       return NULL;
     } else {
-      static void* thread = pthread_getspecific(Thread::pthread_key_self_);
+      void* thread = pthread_getspecific(Thread::pthread_key_self_);
       return reinterpret_cast<Thread*>(thread);
     }
   }
