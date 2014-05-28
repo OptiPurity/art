@@ -21,6 +21,7 @@
 #include "mirror/class-inl.h"
 #include "mirror/object-inl.h"
 #include "object_utils.h"
+#include "thread-inl.h"
 
 namespace art {
 namespace verifier {

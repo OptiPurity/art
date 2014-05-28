@@ -16,7 +16,6 @@
 
 #define ATRACE_TAG ATRACE_TAG_DALVIK
 
-#include <cutils/trace.h>
 #include <signal.h>
 #include <sys/resource.h>
 #include <sys/time.h>
@@ -65,6 +64,7 @@
 #include "verifier/method_verifier.h"
 #include "vmap_table.h"
 #include "well_known_classes.h"
+#include "trace.h"
 
 namespace art {
 

@@ -23,7 +23,7 @@
 #include "base/mutex.h"
 #include "base/timing_logger.h"
 #include "debugger.h"
-#include "thread.h"
+#include "thread-inl.h"
 #include "utils.h"
 
 namespace art {
