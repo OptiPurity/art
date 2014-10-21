@@ -18,6 +18,7 @@
 #include "entrypoints/entrypoint_utils.h"
 #include "mirror/art_method-inl.h"
 #include "mirror/object-inl.h"
+#include "thread-inl.h"
 
 namespace art {
 

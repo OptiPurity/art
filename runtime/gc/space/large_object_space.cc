@@ -21,7 +21,7 @@
 #include "UniquePtr.h"
 #include "image.h"
 #include "os.h"
-#include "thread.h"
+#include "thread-inl.h"
 #include "utils.h"
 
 namespace art {

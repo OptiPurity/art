@@ -40,6 +40,7 @@
 #include "register_line-inl.h"
 #include "runtime.h"
 #include "verifier/dex_gc_map.h"
+#include "thread-inl.h"
 
 namespace art {
 namespace verifier {

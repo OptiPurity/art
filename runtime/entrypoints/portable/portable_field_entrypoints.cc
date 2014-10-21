@@ -18,6 +18,7 @@
 #include "mirror/art_field-inl.h"
 #include "mirror/art_method-inl.h"
 #include "mirror/object-inl.h"
+#include "thread-inl.h"
 
 namespace art {
 

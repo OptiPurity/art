@@ -37,11 +37,13 @@
 #include "ScopedLocalRef.h"
 #include "ScopedPrimitiveArray.h"
 #include "ScopedUtfChars.h"
-#include "thread.h"
+#include "thread-inl.h"
 
 #if defined(HAVE_PRCTL)
 #include <sys/prctl.h>
 #endif
+
+#include <sys/resource.h>
 
 #include <selinux/android.h>
 

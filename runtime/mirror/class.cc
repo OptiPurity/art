@@ -29,7 +29,7 @@
 #include "object_utils.h"
 #include "runtime.h"
 #include "sirt_ref.h"
-#include "thread.h"
+#include "thread-inl.h"
 #include "throwable.h"
 #include "utils.h"
 #include "well_known_classes.h"

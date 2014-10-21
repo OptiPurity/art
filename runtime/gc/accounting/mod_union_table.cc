@@ -27,7 +27,7 @@
 #include "mirror/class-inl.h"
 #include "mirror/object_array-inl.h"
 #include "space_bitmap-inl.h"
-#include "thread.h"
+#include "thread-inl.h"
 #include "UniquePtr.h"
 
 using ::art::mirror::Object;
